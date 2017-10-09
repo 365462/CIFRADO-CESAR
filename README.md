@@ -43,7 +43,7 @@ function cipher()
 ###### termina la funcion cipher
 }
 
-![cifrado cesar](C:\Users\Ana Diaz\Desktop\javascript\CIFRADO CESAR\image\cipher.png)
+![cifrado cesar](CIFRADO CESAR\image\cipher.png)
 
 ### PSEUDO CODIGO FUNCION DESCIPHER:
 
