@@ -43,7 +43,7 @@ function cipher()
 ###### termina la funcion cipher
 }
 
-![cifrado cesar](CIFRADO CESAR\image\cipher.png)
+![cifrado cesar](https://github.com/365462/CIFRADO-CESAR/blob/master/image/cipher.png)
 
 ### PSEUDO CODIGO FUNCION DESCIPHER:
 
@@ -67,4 +67,4 @@ function descipher(string){
 ###### termina la funcion descipher
 }
 
-![descifrado cesar](C:\Users\Ana Diaz\Desktop\javascript\CIFRADO CESAR\image\descipher.png)
+![descifrado cesar](https://github.com/365462/CIFRADO-CESAR/blob/master/image/descipher.png)
