@@ -31,5 +31,8 @@ function descipher(string){
      var descipherLetter =String.fromCharCode(position);
      (string[j]===' ')? oldString+=' ':oldString+=descipherLetter;
    }
-   return oldString;
+   alert("TU NOMBRE CIFRADO ES:"+" "+string)
+   alert("TU NOMBRE DECIFRADO ES:"+" "+oldString)
 }
+
+descipher(cipher());
