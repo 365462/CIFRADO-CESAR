@@ -22,14 +22,17 @@ function cipher(){
 }
 
 
-function descipher(string){
+function decipher(string){
    var oldString='';
 
    for(var j=0; j<string.length; j++)
    {
      var position = (((string.charCodeAt(j)+65-33)%26)+65);
-     var descipherLetter =String.fromCharCode(position);
-     (string[j]===' ')? oldString+=' ':oldString+=descipherLetter;
+     var decipherLetter =String.fromCharCode(position);
+     (string[j]===' ')? oldString+=' ':oldString+=decipherLetter;
    }
-   return oldString;
+   alert("TU NOMBRE CIFRADO ES: "+" "+string)
+   alert("TU NOMBRE DECIFRADO ES: "+" "+oldString)
 }
+
+decipher(cipher());

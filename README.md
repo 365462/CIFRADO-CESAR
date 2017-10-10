@@ -45,10 +45,10 @@ function cipher()
 
 ![cifrado cesar](C:\Users\Ana Diaz\Desktop\javascript\CIFRADO CESAR\image\cipher.png)
 
-### PSEUDO CODIGO FUNCION DESCIPHER:
+### PSEUDO CODIGO FUNCION DECIPHER:
 
-###### creamos una funcion llamada descipher la cual recibe un argumento con el nombre de string, este string es el newString retornado de la funcion cipher
-function descipher(string){
+###### creamos una funcion llamada decipher la cual recibe un argumento con el nombre de string, este string es el newString retornado de la funcion cipher
+function decipher(string){
 ###### se crea una variable con el nombre de oldString
    var oldString='';
 ###### iniciaremos un bucle donde se creara la variable j con el valor de 0 hasta el j menor que la cantidad de caracteres que tiene el string (delimitamos el tamaño) y se recorre el string de 1 en 1
@@ -57,14 +57,17 @@ function descipher(string){
 ###### la posicion en j del string se volvera un dato numerico salido del codico ASCII gracias al "charCodeAt", se le hace una suma de 65 y una resta de 33 (numero fijo igual que en la funcion cipher para descifrar el string) se le saca modulo de 26 (porque solo hay 26 letras en mayuscula) y se le vuelve a sumar 65. A todo esto lo almacenamos en una variable creada llamada Position
      var position = (((string.charCodeAt(j)+65-33)%26)+65);
 ###### Luego con el String.fromCharCode convertiremos el numero que se determino en "Position" a un caracter debido a que el numero ES la nueva posicion en el codigo ASCII
-     var descipherLetter =String.fromCharCode(position);
+     var decipherLetter =String.fromCharCode(position);
 ###### SI el String en la posicion j es un espacio en blanco, el oldString solo agrega un espacio en blanco, caso contrario el oldString agrega la letra descifrada a la nueva frase (descipherLetter)
-     (string[j]===' ')? oldString+=' ':oldString+=descipherLetter;
+     (string[j]===' ')? oldString+=' ':oldString+=decipherLetter;
 ###### cerramos el FOR
    }
 ###### devuelve EL viejo string (string inicial)
    return oldString;
-###### termina la funcion descipher
+###### termina la funcion decipher
 }
 
-![descifrado cesar](C:\Users\Ana Diaz\Desktop\javascript\CIFRADO CESAR\image\descipher.png)
+###### finalmente escribimos las funciones para que se ejecuten
+decipher(cipher());
+
+![descifrado cesar](C:\Users\Ana Diaz\Desktop\javascript\CIFRADO CESAR\image\decipher.png)
