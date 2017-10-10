@@ -19,7 +19,7 @@ function cipher()
         for(var i=0; i<capitalString.length; i++){
 ###### Si capitalString dividida entre 1 da el valor de cero
           if(parseInt(capitalString[i])%1===0){
-###### Saldra una ventana de alerta indicando que la frase no puede contenr numeros debido a que los caracteres no dejan residuo de 0, solo los numeros.
+###### Saldra una ventana de alerta indicando que la frase no puede contener numeros debido a que los caracteres no dejan residuo de 0, solo los numeros.
             alert("LA FRASE NO PUEDE CONTENER NUMEROS");
 ###### Para que no exista un bucle infinito terminamos abruptamente todo el proceso.
             break;
@@ -43,7 +43,7 @@ function cipher()
 ###### termina la funcion cipher
 }
 
-![cifrado cesar](C:\Users\Ana Diaz\Desktop\javascript\CIFRADO CESAR\image\cipher.png)
+![cifrado cesar](image/cipher.png)
 
 ### PSEUDO CODIGO FUNCION DECIPHER:
 
@@ -70,4 +70,4 @@ function decipher(string){
 ###### finalmente escribimos las funciones para que se ejecuten
 decipher(cipher());
 
-![descifrado cesar](C:\Users\Ana Diaz\Desktop\javascript\CIFRADO CESAR\image\decipher.png)
+![descifrado cesar](image/decipher.png)
