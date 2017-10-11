@@ -1,45 +1,35 @@
 # CIFRADO CESAR
 
 ### PSEUDO CODIGO FUNCION CIPHER:
+
 ###### creamos una funcion llamada cipher
-function cipher()
-###### ingresamos una frase por medio de un prompt la cual se almacenará en un string
+function cipher(){
+###### ingresamos una frase por medio de un prompt la cual se almacenará en un string, asi mismo creamos una variable llamada "alphaExp", esta admitira letras en minuscula, mayuscula y espacios en blanco.
   var string=prompt("INGRESE UNA FRASE");
+  var alphaExp = /^[a-zA-Z' '/s]+$/;
+###### mientras que el string no tenga ningun valor ingresado o no coincida con el "alphaExp"
+  while(string==='' || !string.match(alphaExp)){
+###### aparecera un cuadro de alerta con especificaciones ademas de un cuadro de dialogo indicando que ingresemos una frase
+    alert("LA FRASE NO PUEDE ESTAR VACIA O CONTENER NUMEROS");
+    string=prompt("INGRESE UNA FRASE");
+###### cierre del WHILE
+  }
 ###### El contenido del string pasara a mayusculas y se almacenara en la variable capitalString  
   var capitalString = string.toUpperCase();
 ###### Creamos una variable vacia llamda newString
   var newString = '';
-###### Si capitalString no tiene ningun valor ingresado
-  if(capitalString==='')
-###### Saldra una ventana de alerta indicando la inexistencia de la frase
-    alert("LA FRASE NO PUEDE ESTAR VACIA");
-###### caso contrario
-  else{
 ###### iniciaremos un bucle donde se creara la variable i con el valor de 0 hasta el i menor que la cantidad de caracteres que tiene el string (delimitamos el tamaño) y se recorre el string de 1 en 1
-        for(var i=0; i<capitalString.length; i++){
-###### Si capitalString dividida entre 1 da el valor de cero
-          if(parseInt(capitalString[i])%1===0){
-###### Saldra una ventana de alerta indicando que la frase no puede contener numeros debido a que los caracteres no dejan residuo de 0, solo los numeros.
-            alert("LA FRASE NO PUEDE CONTENER NUMEROS");
-###### Para que no exista un bucle infinito terminamos abruptamente todo el proceso.
-            break;
-          }
-###### Ademas
-        else{
-###### la posicion en i del string en mayusculas (capitalString) se volvera un dato numerico salido del codico ASCII gracias al "charCodeAt", se le hace una resta de 65 y una suma de 33 (numero fijo cualquiera para cifrar el string) se le saca modulo de 26 (porque solo hay 26 letras en mayuscula) y se le vuelve a sumar 65. A todo esto lo almacenamos en una variable creada llamada newPosition
-          var newPosition = (((capitalString.charCodeAt(i)-65+33)%26)+65);
+  for(var i=0; i<capitalString.length; i++){
+###### la posicion en i del string en mayusculas (capitalString) se volvera un dato numerico salido del codico ASCII gracias al "charCodeAt", se le hace una resta de 65 y una suma de 33 (numero fijo cualquiera para cifrar el string) se le saca modulo de 26 (porque solo hay 26 letras en mayuscula) y se le vuelve a sumar 65. A todo esto lo almacenamos en una variable creada llamada newPosition.
+    var newPosition = (((capitalString.charCodeAt(i)-65+33)%26)+65);
 ###### Luego con el String.fromCharCode convertiremos el numero que se determino en "newPosition" a un caracter debido a que el numero ES la nueva posicion en el codigo ASCII
-          var cipherLetter = String.fromCharCode(newPosition);
+    var cipherLetter = String.fromCharCode(newPosition);
 ###### SI el capitalString en la posicion i es un espacio en blanco, el newString solo agrega un espacio en blanco, caso contrario el newString agrega la letra cifrada a la nueva frase (cipherLetter)
-          (capitalString[i]===' ')? newString+=' ':newString+=cipherLetter;
-###### se cierra el ELSE
-        }
+    (capitalString[i]===' ')? newString+=' ':newString+=cipherLetter;
 ###### se cierra el FOR
-    }
+  }
 ###### devuelve la el nuevo string formado en los pasos anteriores
     return newString;
-###### se cierra el primer else
-  }
 ###### termina la funcion cipher
 }
 
@@ -67,7 +57,7 @@ function decipher(string){
 ###### termina la funcion decipher
 }
 
+![descifrado cesar](image/decipher.png)
+
 ###### finalmente escribimos las funciones para que se ejecuten
 decipher(cipher());
-
-![descifrado cesar](image/decipher.png)
