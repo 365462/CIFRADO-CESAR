@@ -111,3 +111,15 @@ footer {
 h4 {
   margin: 1%;
 }
+@media (max-width: 767px) {
+  img {
+    max-width: 32%;
+    height: auto;
+    margin-top: 7%;
+  }
+  .justify-content-end {
+    -webkit-box-pack: start!important;
+    -ms-flex-pack: start!important;
+    justify-content: flex-start!important;
+  }
+}
