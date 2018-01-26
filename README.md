@@ -1,4 +1,17 @@
-# CIFRADO CESAR
+# Cifrado Cesar
+Este proyecto es una versión actualizada del Cifrado-César original. 
+
+cuenta con elementos sacados de bootstrap 4 para el siguiente diseño: 
+
+![pagina-web](assets/images/web-page.png)
+
+Como se muestra en la imagen, hay una opción para cifrar y otra para descifrar. Al clickear estos botones, se realiza la acción respectiva activando un cuadro con la solucion/respuesta junto con un boton que permitirá limpiar los datos puestos en la pagina web.
+
+El diseño es amigable y fácil de entender por lo que no se requiere de un tutorial para que el usuario pueda manejar la página web.
+
+* Autor: Ana Lorena Díaz Pérez
+* Fecha: 25/01/2018 
+<!-- # CIFRADO CESAR
 
 ### PSEUDO CODIGO FUNCION CIPHER:
 
@@ -60,4 +73,4 @@ function decipher(string){
 ![descifrado cesar](image/decipher.png)
 
 ###### finalmente escribimos las funciones para que se ejecuten
-decipher(cipher());
+decipher(cipher()); -->
