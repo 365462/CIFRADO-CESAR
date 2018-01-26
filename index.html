@@ -1,27 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<!-- - - - - - - - - - - - - - - - - - - - HEAD - - - - - - - - - - - - - - - - - - -  -->
 <head>
-  <meta charset="utf-8" />
-  <title>TARJETA DE CREDITO VALIDA</title>
-  <script src="js/app.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Cifrado Cesar</title>
 </head>
-<body BGCOLOR="#000000">
-  <center>
-    <h1>
-      <img src="image/pinkyCoders.gif">
-    </h1>
-    <h2>
-      <font color ="#FF6699">
-        Esta pagina te pide ingresar UNA FRASE
-      </font>
-    </h2>
-    <H3>
-      <font color ="#CC0066">
-        La frase no debe contener numeros ni estar vacia
-      </font>
-    </H3>
-  </center>
+<!-- - - - - - - - - - - - - - - - - - - - BODY - - - - - - - - - - - - - - - - - - -  -->
+<body>
 
-  <div align="center"><img src="image/pinkiYCerebro.png"></div>
+  <header class="fixed-top">
+    <div class="container">
+      <nav class="navbar justify-content-end">
+        <a href="#"><img src="assets/images/logo.png"></a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="banner" style="background-image:url('http://htmlcsslove.com/codepen/bootstrap4/banner.jpg');">
+    <div class="container">
+      <div class="align-items-center">
+        <div class="col-md-5 align-self-center">
+          <div class="banner-text text-right">
+            <h1 class="display-6 ">Porfavor ingrese una frase:</h1>
+            <div class="input-group input-group-lg">
+              <input id="input" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            </div>
+          </div>
+        </div>
+        <a onclick="cipher()" href="#" class="btn btn-primary btn-lg mt-4" role="button" aria-pressed="true">Encriptar</a>
+        <a onclick="decipher()" href="#" class="btn btn-primary btn-lg mt-4" role="button" aria-pressed="true">Desencriptar</a>
+        <div id="output" class="output"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="py-5">
+    <div class="container">
+      <p>Cesar Cipher by Ana</p>
+    </div>
+  </footer>
+  
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

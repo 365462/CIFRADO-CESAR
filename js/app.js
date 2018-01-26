@@ -1,34 +1,29 @@
-function cipher(){
-  var string=prompt("INGRESE UNA FRASE");
+function cipher() {
   var alphaExp = /^[a-zA-Z' '/s]+$/;
-
-  while(string==='' || !string.match(alphaExp)){
-    alert("LA FRASE NO PUEDE ESTAR VACIA O CONTENER NUMEROS");
-    string=prompt("INGRESE UNA FRASE");
-  }
-
-  var capitalString = string.toUpperCase();
-  var newString = '';
-
-  for(var i=0; i<capitalString.length; i++){
-    var newPosition = (((capitalString.charCodeAt(i)-65+33)%26)+65);
+  var input = document.getElementById('input').value.toUpperCase();
+  var newInput = '';
+  console.log(input);
+  for (var i = 0; i < input.length; i++) {
+    var newPosition = (((input.charCodeAt(i)-65+33)%26)+65);
     var cipherLetter = String.fromCharCode(newPosition);
-    (capitalString[i]===' ')? newString+=' ':newString+=cipherLetter;
+    (input[i]===' ')? newInput += ' ' : newInput += cipherLetter;
   }
-    return newString;
+  document.getElementById("output").innerHTML = 
+  `<h6 class="white">Texto cifrado:</h6>` + `<h4>` + newInput + `</h4>` + `<button onclick="history.go(0)" class="btn btn-success btn-lg btn-principal">Limpiar</button>`;
+  console.log(newInput);
 }
 
-function descipher(string){
-   var oldString='';
-
-   for(var j=0; j<string.length; j++)
-   {
-     var position = (((string.charCodeAt(j)+65-33)%26)+65);
-     var descipherLetter =String.fromCharCode(position);
-     (string[j]===' ')? oldString+=' ':oldString+=descipherLetter;
-   }
-   alert("TU NOMBRE CIFRADO ES:"+" "+string)
-   alert("TU NOMBRE DECIFRADO ES:"+" "+oldString)
+function decipher() {
+  var alphaExp = /^[a-zA-Z' '/s]+$/;
+  var cipherLetter = document.getElementById('input').value.toUpperCase();
+  var input = '';
+  console.log(cipherLetter);
+  for (var j = 0; j < cipherLetter.length; j++) {
+    var position = (((cipherLetter.charCodeAt(j)+65-33)%26)+65);
+    var decipher = String.fromCharCode(position);
+    (cipherLetter[j]===' ')? input += ' ' : input += decipher;
+  }
+  document.getElementById("output").innerHTML = 
+  `<h6 class="white">Texto descifrado:</h6>` + `<h4>` + input + `</h4>` + `<button onclick="history.go(0)" class="btn btn-success btn-lg btn-principal">Limpiar</button>`;
+  console.log(input);
 }
-
-descipher(cipher());

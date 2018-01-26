@@ -1,0 +1,113 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: #3a4d60;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+  -webkit-text-stroke: rgba(255, 255, 255, 0.01) 0.1px;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+header {
+  background: transparent;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.white {
+  color: antiquewhite;
+}
+
+.black {
+  color: #2e3b4e;
+}
+
+.banner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 95px;
+}
+
+.banner .container,
+.banner .container .row {
+  position: relative;
+  height: 100%;
+}
+
+.banner .banner-text h1 {
+  color: #fff;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #8824cd;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 40px;
+  letter-spacing: 0.05em;
+  box-shadow: 0px 4px 11px 0px rgba(255, 255, 255, 0.23) inset;
+  margin: 0% 3% 0% 1%;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #e7526b;
+  border: none;
+}
+
+
+.btn-light {
+  color: #d54c63;
+  background-color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 0 40px;
+  font-size: 14px;
+  line-height: 3;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  box-shadow: 0px 4px 11px 0px rgba(255, 255, 255, 0.23) inset;
+}
+
+.btn-light:hover {
+  color: #fff;
+  background-color: #8824cd;
+  border: none;
+}
+
+.btn-light.focus,
+.btn-light:focus {
+  box-shadow: 0px 4px 11px 0px rgba(255, 255, 255, 0.23) inset;
+}
+
+.mt-4, .my-4 {
+  margin-top: 2.5rem!important;
+}
+
+footer {
+  background-color: #2e3b4e;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+.output {
+  color: black;
+  background-color: #dfbdc78c;
+  margin-top: 5%;
+}
+
+h4 {
+  margin: 1%;
+}
